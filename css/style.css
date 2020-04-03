@@ -1,0 +1,265 @@
+
+/*css mặc định*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.clr{
+	clear: both;
+}
+.Mycontainer{
+	width: 91%;
+	margin: 0 auto;
+	padding: 0px !important;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*css riêng từng website*/
+
+p{
+	margin-bottom: 0px;
+}
+nav, ul{
+	height: 44px !important;
+}
+nav{
+	width: 75% !important;
+}
+a:hover{
+	text-decoration: none;
+}
+
+/*Tạo lưới cho trang web*/
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-row-gap: 1rem;
+
+}
+
+/*CSS CHO HEADER*/
+
+
+/*css chia layout cho header*/
+#box-page #HOME .grid-container #slogan p{
+	font-size: 25px;
+	color: #005AA3;
+}
+#box-page #HOME .grid-container{
+	padding-top: 20px !important;
+}
+#box-page #HOME .grid-container #lo-go{
+	grid-column: span 3;
+	grid-row: span 2;
+}
+#box-page #HOME .grid-container #slogan{
+	grid-column: span 4;
+	grid-column-start: 5;
+	grid-column-end: 9;
+	margin: auto 0px;
+}
+#box-page #HOME .grid-container #searching{
+	grid-column: span 3;
+	grid-column-start: 10;
+	grid-column-end: 13;
+	margin:auto;
+}
+
+/*Hết phần chia layout header*/
+
+#box-page .grid-container #searching input{
+	padding: 3px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 210px
+}
+#box-page .grid-container #searching input:focus{
+	background-color: #f5fafd;
+}
+#box-page .grid-container #searching button{
+	padding: 3px;
+	border: 1px solid #005AA3;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: white;
+}
+#box-page .grid-container #searching button i{
+	font-size: 15px;
+	font-weight: bold;
+}
+#box-page .grid-container #searching button:hover{
+	background-color: #005AA3;
+	color:white;
+}
+#box-page .grid-container #searching input,button:focus{
+	outline: none;
+}
+#box-page .grid-container #searching span{
+	cursor: pointer;
+}
+#box-page .nav nav{
+	list-style-type: none;
+	background-image: url(../img/bg-nav.png);
+	background-size: cover;
+	margin-bottom: 1px;
+	position: absolute;
+	top:70px;
+	right: 0px;
+	width: 1100px;
+}
+/*CSS CỐ ĐỊNH THANH MENU*/
+
+.sticky{
+	position: fixed;
+	z-index: 1000;
+	box-shadow: -2px 3px 5px #565555;
+	background-color: black;
+	top: 0;
+	left: 25%;
+	opacity: 0.7;
+}
+ul:hover{
+	opacity: 1
+}
+/*hết*/
+#box-page .nav nav ul{
+	margin-left: 65px;
+	margin-bottom: 0px;
+}
+#box-page .nav nav ul li{
+	display: inline-block;
+}
+#box-page .nav nav ul li a{
+	padding: 9px 40px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	display: block;	
+}
+#box-page .nav nav ul li a:hover{
+	color: #ffc8ca
+}
+
+/*CSS CHO BODY*/
+
+/*css cho #about us & #main service */
+
+#box-page #main-body .content{
+	text-align: center;
+}
+#box-page #main-body .content .title{
+	font-weight: bold;
+	font-size: 27px;
+	color: #d12028;
+	padding-top: 40px;
+	opacity: 0;
+}
+#box-page #main-body .content:nth-child(2){
+	background-image: url(../img/BG.png);
+}
+.up{
+	opacity: 0
+}
+#box-page #main-body .content .information #txt{
+	font-size: 18px;
+	font-weight: bold;
+	color: #565555;
+	margin-bottom: 30px;
+	grid-column-start: 2;
+	grid-column-end: 12;
+}
+#box-page #main-body .Mycontainer .grid-container{
+	margin-top: 20px;
+}
+#box-page #main-body .Mycontainer .grid-container .grid-col{
+	grid-column: span 3;
+	opacity:0
+}
+#box-page #main-body .Mycontainer .grid-container .grid-col img{
+	opacity: 85%;
+}
+#box-page #main-body .Mycontainer .grid-container .grid-col .services{
+	padding: 25px 0px;
+	margin-bottom: 25px;
+}
+#box-page #main-body .Mycontainer .grid-container .grid-col .services {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #565555;
+}
+
+/*CSS HOVER MAIN SERVICE*/
+
+#box-page #main-body .Mycontainer .grid-container .grid-col .services:hover {
+	transform: scale(1.25);
+	transition-duration: 0.4s;
+	color: #d12028;
+}
+#box-page #main-body .Mycontainer .grid-container .grid-col img:hover{
+	opacity: 100%;
+	transform: scale(1.25);
+	transition-duration: 0.4s;
+}
+
+
+.back-to-top{
+	width: 54px;
+	height: 54px;
+	background-color: #d12028;
+	cursor: pointer;
+	position: fixed;
+	bottom: 10%;
+	right: 50%;
+	border-radius: 50%;
+	opacity: 0;
+	visibility: hidden;
+}
+.back-to-top i{
+	color: white;
+	font-size: 25px;
+	position: absolute;
+	left: 25%;
+	top: 20%;
+}
+.back-to-top:hover{
+	opacity: 1;
+}
+.show{
+	opacity: 0.5;
+	visibility: visible;
+}
+/*CSS CHO FOOTER*/
+
+#box-page footer{
+	background-color: #e1e1e1;
+}
+#box-page footer .Mycontainer{
+	padding: 40px 0px !important ;
+}
+#box-page footer .Mycontainer .contact{
+	float: left;
+	opacity: 0;
+}
+#box-page footer .Mycontainer .map{
+	float: right;
+	height: 200px;
+	overflow: hidden;
+	opacity: 0;
+}
+#box-page footer .Mycontainer .contact p:first-child{
+	font-size: 26px;
+	font-weight: bolder;
+	color: #404040;
+	padding-bottom:20px ;
+}
+#box-page footer .Mycontainer .contact #box {
+	width: 650px;
+}
+#box-page footer .Mycontainer .contact #box p{
+	font-size: 18px;
+	font-weight: bolder;
+	padding: 5px 0px;
+	color: #404040;
+}
